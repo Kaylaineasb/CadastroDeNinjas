@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Table(name = "tb_cadastro")
 @NoArgsConstructor
@@ -16,11 +14,17 @@ import java.util.List;
 public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "id")
+    private Long id;
 
+    @Column(name = "nome")
     private String nome;
 
+    @Column(name = "idade")
     private int idade;
+
+    @Column(name = "img_url")
+    private String imgUrl;
 
     @Column(unique = true)
     private String email;

@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class MissaoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String titulo;
 
